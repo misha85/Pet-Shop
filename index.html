@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>pet-shop</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script><!--bootbox.js-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200i,400,500i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="shortcut icon" type="image/png" href="./static/favicon-32x32.png"/>
+  </head>
+  <body onresize="ispisi()">
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
+
+<style>
+  /*.zalepi {*/
+    /*position: fixed;*/
+    /*bottom: 0;*/
+  /*}*/
+  /*.zalepiSubFooter {*/
+    /*position: fixed;*/
+    /*bottom: 60px;*/
+  /*}*/
+</style>
+<script>
+    var footer = document.querySelector('footer');
+    var subFooter = document.querySelector('#sub-footer');
+
+    function ispisi() {
+        let monitor = document.body.clientHeight;
+        let prozor = window.innerHeight;
+        if (monitor <= prozor) {
+            footer.classList.add("zalepi");
+            subFooter.classList.add("zalepiSubFooter");
+        } else {
+            footer.classList.remove("zalepi");
+            subFooter.classList.remove("zalepiSubFooter");
+        }
+    }
+    if (document.body.clientHeight <= window.innerHeight) {
+        footer.classList.add("zalepi");
+        subFooter.classList.add("zalepiSubFooter");
+    } else {
+        footer.classList.remove("zalepi");
+        subFooter.classList.remove("zalepiSubFooter");
+    }
+
+</script>
